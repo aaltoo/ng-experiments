@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()" class="form">
+  <input
+    required
+    type="text"
+    placeholder="name"
+    formControlName="name"
+    class="form__input"
+    [ngClass]="{
+      'form__input--invalid': (name!.errors?.['required'] || name!.invalid) && name!.touched
+    }"
+  />
+  <div *ngIf="name!.invalid && (name!.dirty || name!.touched)">
+    <div *ngIf="name!.errors?.['required']">Name is required.</div>
+  </div>
+  <input
+    required
+    type="number"
+    placeholder="age"
+    formControlName="age"
+    class="form__input"
+    [ngClass]="{
+      'form__input--invalid': (age!.errors?.['required'] || age!.invalid) && age!.touched
+    }"
+  />
+  <div *ngIf="age!.invalid && (age!.dirty || age!.touched)">
+    <div *ngIf="age!.errors?.['required']">Age is required.</div>
+    <div *ngIf="age!.errors?.['pattern']">Age is incorrect.</div>
+  </div>
+  <button type="submit">Submit</button>
+</form>
