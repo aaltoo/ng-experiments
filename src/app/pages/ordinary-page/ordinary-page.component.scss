@@ -1,13 +1,15 @@
-.form {
+.page {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 
-  &__input {
-    outline: none;
-
-    &--invalid {
-      border: 2px solid red;
-    }
+  .form {
+    display: flex;
+    flex-direction: column;
   }
+}
+
+button {
+  margin-top: 20px;
 }
