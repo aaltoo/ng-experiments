@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <mat-toolbar color="primary">
+    <a [routerLink]="'/'" mat-button>Home</a>
+    <a [routerLink]="'/ordinary-page'" mat-button>Ordinary page</a>
+    <a [routerLink]="'/list'" mat-button>List</a>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>

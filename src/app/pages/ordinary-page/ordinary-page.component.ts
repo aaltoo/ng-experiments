@@ -1,6 +1,7 @@
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
@@ -24,6 +25,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
   ],
 })
 export class OrdinaryPageComponent {

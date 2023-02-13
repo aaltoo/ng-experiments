@@ -2,14 +2,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: calc(100vh - 64px);
 
-  .form {
-    display: flex;
-    flex-direction: column;
+  .example-card {
+    width: 400px;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+    }
   }
 }
 
 button {
   margin-top: 20px;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
 }
